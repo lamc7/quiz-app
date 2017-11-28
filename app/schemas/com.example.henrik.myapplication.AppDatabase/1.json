@@ -1,0 +1,67 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "962bdbbfb3f1aa7200e883cf3c283b31",
+    "entities": [
+      {
+        "tableName": "question",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`qid` INTEGER PRIMARY KEY AUTOINCREMENT, `question` TEXT, `answerA` TEXT, `answerB` TEXT, `answerC` TEXT, `answerD` TEXT, `answerE` TEXT, `correct` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "qid",
+            "columnName": "qid",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "question",
+            "columnName": "question",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "answerA",
+            "columnName": "answerA",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "answerB",
+            "columnName": "answerB",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "answerC",
+            "columnName": "answerC",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "answerD",
+            "columnName": "answerD",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "answerE",
+            "columnName": "answerE",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "correct",
+            "columnName": "correct",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "qid"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"962bdbbfb3f1aa7200e883cf3c283b31\")"
+    ]
+  }
+}
